@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Header from "@/components/Header";
 
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={grotesk.variable}>
-      <body>{children}</body>
+      <body className="overflow-x-hidden bg-stone-800">
+        <Header />
+        <main>{children}</main>
+      </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
