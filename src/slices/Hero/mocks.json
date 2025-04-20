@@ -1,0 +1,101 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heding": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Tried"
+						}
+					}
+				]
+			},
+			"subheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut nulla minim velit proident sit ad et Lorem id occaecat Lorem officia velit dolor pariatur. Nostrud excepteur occaecat consectetur ad mollit enim ullamco non cillum irure Lorem aliqua labore. Ipsum laboris eu exercitation dolore consequat eiusmod et."
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non dolore irure exercitation consectetur occaecat reprehenderit nisi aute reprehenderit. Minim aute aliquip elit aute pariatur reprehenderit amet eu laboris Lorem in nulla ipsum. Irure aliqua id commodo velit proident do magna eiusmod veniam consectetur veniam qui non exercitation anim."
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "volume",
+				"type": "Text"
+			},
+			"button_link": {
+				"key": "26dff3b2-7a7d-4017-863d-10ee047fc981",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "apple"
+				}
+			},
+			"cans_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+					"width": 6000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+				"width": 6000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "regular",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"second_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Breeze"
+						}
+					}
+				]
+			},
+			"second_body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint in nulla qui velit eu esse cillum dolor commodo deserunt. Cillum do enim dolore qui laborum laboris ullamco eiusmod fugiat sit sint consequat Lorem. Non cupidatat elit proident nostrud commodo."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
