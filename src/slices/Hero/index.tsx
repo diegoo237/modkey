@@ -58,14 +58,28 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       },
     });
 
-    scrollTl.fromTo(
-      "body",
-      {
-        backgroundColor: "#292524",
-      },
-      { backgroundColor: "#a8a29e", overwrite: "auto" },
-      1,
-    );
+    scrollTl
+      .fromTo(
+        "body",
+        {
+          backgroundColor: "#292524",
+        },
+        { backgroundColor: "#78716c", overwrite: "auto" },
+        1,
+      )
+      .from(".text-side-heading  .split-char", {
+        scale: 1.3,
+        y: 40,
+        rotate: -25,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "back.out(3)",
+        duration: 0.5,
+      })
+      .from(".text-side-body ", {
+        y: 20,
+        opacity: 0,
+      });
   });
 
   return (
