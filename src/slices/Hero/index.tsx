@@ -12,6 +12,8 @@ import { PrismicNextImage } from "@prismicio/next";
 import { TextSplitter } from "@/components/TextSplitter";
 import { Bounded } from "@/components/Boundede";
 import Button from "@/components/Button";
+import { View } from "@react-three/drei";
+import Scene from "./Scene";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -33,8 +35,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       .from(".hero-header-word", {
         scale: 3,
         opacity: 0,
-        ease: "power4.in",
-        delay: 0.3,
+        delay: 0,
         stagger: 1,
       })
       .from(".hero-subheading", { opacity: 0, y: 30 }, "+=.8")
@@ -88,6 +89,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="hero opacity-0"
     >
+      <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
+        <Scene />
+      </View>
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <div className="grid auto-rows-min place-items-center text-center">

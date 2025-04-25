@@ -5,6 +5,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 
 import "./app.css";
+import ViewCanvas from "@/components/ViewCanvas";
 
 const grotesk = localFont({
   src: "../../public/fonts/ClashGrotesk-Variable.woff2",
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en" className={grotesk.variable}>
       <body className="overflow-x-hidden bg-stone-800">
         <Header />
-        <main>{children}</main>
+        <main>
+          {children}
+          <ViewCanvas />
+        </main>
       </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>
