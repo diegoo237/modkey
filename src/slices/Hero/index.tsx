@@ -35,7 +35,8 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       .from(".hero-header-word", {
         scale: 3,
         opacity: 0,
-        delay: 0,
+        ease: "power4.in",
+        delay: 0.3,
         stagger: 1,
       })
       .from(".hero-subheading", { opacity: 0, y: 30 }, "+=.8")

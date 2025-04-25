@@ -2,105 +2,86 @@
 
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
+import { GroupProps } from "@react-three/fiber";
 
 useGLTF.preload("/1.gltf");
 
-const defaultTextures = {
-  body: "/labels/baseLabels/Image_0.png",
-  key: "/labels/keyCapsLabels/Image_3.png",
+// Texturas do corpo
+const bodyTexturePaths = {
+  black: "/labels/baseLabels/Black.png",
+  red: "/labels/baseLabels/Red.png",
+  blue: "/labels/baseLabels/Blue.png",
+  green: "/labels/baseLabels/Green.png",
+  white: "/labels/baseLabels/White.png",
 };
 
-const blackMaterial = new THREE.MeshStandardMaterial({
-  color: "black",
-  metalness: 0.4,
-  roughness: 1,
-});
+// Texturas das keycaps
+const keycapsTexturePaths = {
+  classic: "/labels/keyCapsLabels/Classic.png",
+};
 
 export type KeyboardCanProps = {
-  body?: keyof typeof defaultTextures;
-  key?: keyof typeof defaultTextures;
+  bodyVariant?: keyof typeof bodyTexturePaths;
+  keycapsVariant?: keyof typeof keycapsTexturePaths;
   scale?: number;
-};
+} & GroupProps;
 
 export function KeyboardCan({
-  body = "body",
-  key = "key",
+  bodyVariant = "black",
+  keycapsVariant = "classic",
   scale = 3,
   ...props
 }: KeyboardCanProps) {
-  const { nodes } = useGLTF("/1.gltf");
+  const { nodes } = useGLTF("/1.gltf") as any;
 
-  const types = useTexture(defaultTextures);
+  const bodyTextures = useTexture(bodyTexturePaths);
+  const keycapTextures = useTexture(keycapsTexturePaths);
 
-  types.body.flipY = false;
-  types.key.flipY = false;
+  bodyTextures[bodyVariant].flipY = false;
+  keycapTextures[keycapsVariant].flipY = false;
 
-  const bodyType = types[body];
-  const keyType = types[key];
+  const bodyTexture = bodyTextures[bodyVariant];
+  const keycapTexture = keycapTextures[keycapsVariant];
+
+  const blackPlasticMaterial = new THREE.MeshStandardMaterial({
+    color: "black",
+    metalness: 0.4,
+    roughness: 1,
+  });
 
   return (
-    <group {...props} dispose={null} scale={scale} rotation={[0, 0.5, 1.57]}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.BodyLower_BodyTexture_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={bodyType} />
+    <group {...props} dispose={null} scale={scale} rotation={[0, 0, 0]}>
+      <mesh geometry={nodes.BodyLower_BodyTexture_0.geometry}>
+        <meshStandardMaterial map={bodyTexture} />
+      </mesh>
+
+      <mesh geometry={nodes.BodyUpper_BodyTexture_0.geometry}>
+        <meshStandardMaterial map={bodyTexture} />
+      </mesh>
+
+      <mesh geometry={nodes.Controls_BodyTexture_0.geometry}>
+        <meshStandardMaterial map={bodyTexture} />
+      </mesh>
+
+      <mesh geometry={nodes.KeyCaps_KeyCaps_0.geometry}>
+        <meshStandardMaterial map={keycapTexture} />
       </mesh>
 
       <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.BodyUpper_BodyTexture_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={bodyType} />
-      </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.Controls_BodyTexture_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={bodyType} />
-      </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.KeyCaps_KeyCaps_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={keyType} />
-      </mesh>
-
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.KeyTray_Black_0 as THREE.Mesh).geometry}
-        material={blackMaterial}
+        geometry={nodes.KeyTray_Black_0.geometry}
+        material={blackPlasticMaterial}
       />
 
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.Legs_BodyTexture_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={bodyType} />
+      <mesh geometry={nodes.Legs_BodyTexture_0.geometry}>
+        <meshStandardMaterial map={bodyTexture} />
       </mesh>
 
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.Switch1_BodyTexture_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={bodyType} />
+      <mesh geometry={nodes.Switch1_BodyTexture_0.geometry}>
+        <meshStandardMaterial map={bodyTexture} />
       </mesh>
 
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={(nodes.Switch2_BodyTexture_0 as THREE.Mesh).geometry}
-      >
-        <meshStandardMaterial map={bodyType} />
+      <mesh geometry={nodes.Switch2_BodyTexture_0.geometry}>
+        <meshStandardMaterial map={bodyTexture} />
       </mesh>
     </group>
   );

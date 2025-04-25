@@ -388,12 +388,12 @@
     {
       "mimeType": "image/png",
       "name": "Image_0",
-      "uri": "labels/baseLabels/Image_0.png"
+      "uri": "labels/baseLabels/Black.png"
     },
     {
       "mimeType": "image/png",
       "name": "Image_3",
-      "uri": "labels/keyCapsLabels/Image_3.png "
+      "uri": "labels/keyCapsLabels/Classic.png "
     }
   ],
   "accessors": [

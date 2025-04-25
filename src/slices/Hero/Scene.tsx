@@ -40,11 +40,11 @@ export default function Scene({}: Props) {
     ) {
       return;
     }
-    gsap.set(can1Ref.current.position, { x: -1.5 });
-    gsap.set(can1Ref.current.rotation, { z: -0.5 });
+    gsap.set(can1Ref.current.position, { x: -1.3 });
+    gsap.set(can1Ref.current.rotation, { z: -1.25 });
 
-    gsap.set(can2Ref.current.position, { x: 1.5 });
-    gsap.set(can2Ref.current.rotation, { z: 0.5 });
+    gsap.set(can2Ref.current.position, { x: 1.3 });
+    gsap.set(can2Ref.current.rotation, { z: 1.25 });
 
     gsap.set(can3Ref.current.position, { y: 5, z: 2 });
     gsap.set(can4Ref.current.position, { x: 2, y: 4, z: 2 });
@@ -78,19 +78,19 @@ export default function Scene({}: Props) {
       .to(groupRef.current.rotation, { y: Math.PI * 2 })
 
       .to(can1Ref.current.position, { x: -0.2, y: -0.7, z: -2 }, 0)
-      .to(can1Ref.current.rotation, { z: 0.3 }, 0)
+      .to(can1Ref.current.rotation, { z: 1.25 }, 0)
 
       .to(can2Ref.current.position, { x: 1, y: -0.2, z: -1 }, 0)
-      .to(can2Ref.current.rotation, {}, 0)
+      .to(can2Ref.current.rotation, { z: 1.25 }, 0)
 
       .to(can3Ref.current.position, { x: -0.3, y: 0.5, z: -1 }, 0)
-      .to(can3Ref.current.rotation, { z: -0.1 }, 0)
+      .to(can3Ref.current.rotation, { z: 1.25 }, 0)
 
       .to(can4Ref.current.position, { x: 0, y: -0.3, z: 0.5 }, 0)
-      .to(can4Ref.current.rotation, { z: 0.3 }, 0)
+      .to(can4Ref.current.rotation, { z: 1.25 }, 0)
 
       .to(can5Ref.current.position, { x: 0.3, y: 0.5, z: -0.5 }, 0)
-      .to(can5Ref.current.rotation, { z: -0.25 }, 0)
+      .to(can5Ref.current.rotation, { z: 1.25 }, 0)
 
       .to(
         groupRef.current?.position,
@@ -106,14 +106,39 @@ export default function Scene({}: Props) {
   return (
     <group ref={groupRef}>
       <group ref={can1GroupRef}>
-        <FloatingCan ref={can1Ref} keyboard="1" floatSpeed={FLOAT_SPEED} />
+        <FloatingCan
+          ref={can1Ref}
+          bodyVariant="black"
+          keycapsVariant="classic"
+          floatSpeed={FLOAT_SPEED}
+        />
       </group>
       <group ref={can2GroupRef}>
-        <FloatingCan ref={can2Ref} keyboard="1" floatSpeed={FLOAT_SPEED} />
+        <FloatingCan
+          ref={can2Ref}
+          bodyVariant="white"
+          keycapsVariant="classic"
+          floatSpeed={FLOAT_SPEED}
+        />
       </group>
-      <FloatingCan ref={can3Ref} keyboard="1" floatSpeed={FLOAT_SPEED} />
-      <FloatingCan ref={can4Ref} keyboard="1" floatSpeed={FLOAT_SPEED} />
-      <FloatingCan ref={can5Ref} keyboard="1" floatSpeed={FLOAT_SPEED} />
+      <FloatingCan
+        ref={can3Ref}
+        bodyVariant="blue"
+        keycapsVariant="classic"
+        floatSpeed={FLOAT_SPEED}
+      />
+      <FloatingCan
+        ref={can4Ref}
+        bodyVariant="green"
+        keycapsVariant="classic"
+        floatSpeed={FLOAT_SPEED}
+      />
+      <FloatingCan
+        ref={can5Ref}
+        bodyVariant="red"
+        keycapsVariant="classic"
+        floatSpeed={FLOAT_SPEED}
+      />
 
       <Environment files="/hdr/lobby.hdr" environmentIntensity={1.5} />
     </group>

@@ -6,7 +6,8 @@ import { Float } from "@react-three/drei";
 import { Group } from "three";
 
 type FloatingCanProps = {
-  keyboard?: KeyboardCanProps["keyboard"];
+  bodyVariant?: KeyboardCanProps["bodyVariant"];
+  keycapsVariant?: KeyboardCanProps["keycapsVariant"];
   floatSpeed?: number;
   rotationIntensity?: number;
   floatIntensity?: number;
@@ -17,7 +18,8 @@ type FloatingCanProps = {
 const FloatingCan = forwardRef<Group, FloatingCanProps>(
   (
     {
-      keyboard = "1",
+      bodyVariant = "black",
+      keycapsVariant = "classic",
       floatSpeed = 1.5,
       rotationIntensity = 1,
       floatIntensity = 0.5,
@@ -36,7 +38,10 @@ const FloatingCan = forwardRef<Group, FloatingCanProps>(
           floatingRange={floatingRange}
         >
           {children}
-          <KeyboardCan keyboard={keyboard} />
+          <KeyboardCan
+            bodyVariant={bodyVariant}
+            keycapsVariant={keycapsVariant}
+          />
         </Float>
       </group>
     );
