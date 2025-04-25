@@ -1,0 +1,711 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.4.56",
+    "version": "2.0"
+  },
+  "extensionsUsed": ["KHR_draco_mesh_compression"],
+  "extensionsRequired": ["KHR_draco_mesh_compression"],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [18]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "BodyLower_BodyTexture_0"
+    },
+    {
+      "children": [0],
+      "name": "BodyLower",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 1,
+      "name": "BodyUpper_BodyTexture_0"
+    },
+    {
+      "children": [2],
+      "name": "BodyUpper",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 2,
+      "name": "Controls_BodyTexture_0"
+    },
+    {
+      "children": [4],
+      "name": "Controls",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 3,
+      "name": "KeyCaps_KeyCaps_0"
+    },
+    {
+      "children": [6],
+      "name": "KeyCaps",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 4,
+      "name": "KeyTray_Black_0"
+    },
+    {
+      "children": [8],
+      "name": "KeyTray",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 5,
+      "name": "Legs_BodyTexture_0"
+    },
+    {
+      "children": [10],
+      "name": "Legs",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 6,
+      "name": "Switch1_BodyTexture_0"
+    },
+    {
+      "children": [12],
+      "name": "Switch1",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "mesh": 7,
+      "name": "Switch2_BodyTexture_0"
+    },
+    {
+      "children": [14],
+      "name": "Switch2",
+      "rotation": [-0.6537061333656311, 0, 0, 0.7567484974861145],
+      "scale": [100, 99.99999237060547, 99.99999237060547]
+    },
+    {
+      "children": [1, 3, 5, 7, 9, 11, 13, 15],
+      "name": "RootNode"
+    },
+    {
+      "children": [16],
+      "name": "c9f391d730904641a7fe01d944b506d5.fbx",
+      "rotation": [0.70710688829422, 0, 0, 0.7071066498756409],
+      "scale": [
+        0.009999999776482582, 0.010000000707805157, 0.010000000707805157
+      ]
+    },
+    {
+      "children": [17],
+      "name": "Sketchfab_model",
+      "rotation": [-0.70710688829422, 0, 0, 0.7071066498756409],
+      "translation": [0, 0.07138406485319138, 0]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "BodyTexture",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "KeyCaps",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Black",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0, 0, 0, 1],
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "BodyLower_BodyTexture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2,
+            "TEXCOORD_1": 3,
+            "TEXCOORD_2": 4
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BodyUpper_BodyTexture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 6,
+            "NORMAL": 7,
+            "TEXCOORD_0": 8,
+            "TEXCOORD_1": 9,
+            "TEXCOORD_2": 10
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 1,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Controls_BodyTexture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14,
+            "TEXCOORD_1": 15,
+            "TEXCOORD_2": 16
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 17,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "KeyCaps_KeyCaps_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 18,
+            "NORMAL": 19,
+            "TEXCOORD_0": 20,
+            "TEXCOORD_1": 21,
+            "TEXCOORD_2": 22
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 23,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "KeyTray_Black_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 24,
+            "NORMAL": 25,
+            "TEXCOORD_0": 26
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 4,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          },
+          "indices": 27,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Legs_BodyTexture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 28,
+            "NORMAL": 29,
+            "TEXCOORD_0": 30,
+            "TEXCOORD_1": 31,
+            "TEXCOORD_2": 32
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 5,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 33,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Switch1_BodyTexture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 34,
+            "NORMAL": 35,
+            "TEXCOORD_0": 36,
+            "TEXCOORD_1": 37,
+            "TEXCOORD_2": 38
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 6,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 39,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Switch2_BodyTexture_0",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 40,
+            "NORMAL": 41,
+            "TEXCOORD_0": 42,
+            "TEXCOORD_1": 43,
+            "TEXCOORD_2": 44
+          },
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 7,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2,
+                "TEXCOORD_1": 3,
+                "TEXCOORD_2": 4
+              }
+            }
+          },
+          "indices": 45,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/png",
+      "name": "Image_0",
+      "uri": "labels/baseLabels/Image_0.png"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "Image_3",
+      "uri": "labels/keyCapsLabels/Image_3.png "
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5126,
+      "count": 495,
+      "max": [0.2134096622467041, 0.07388271391391754, 0.007496217265725136],
+      "min": [-0.19937466084957123, -0.08277459442615509, -0.02283855900168419],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 495,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 495,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 495,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 495,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 1950,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 3805,
+      "max": [0.21890997886657715, 0.07756290584802628, 0.018937168642878532],
+      "min": [
+        -0.2032821774482727, -0.08627618104219437, -0.0027693239971995354
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 3805,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 3805,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 3805,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 3805,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 15282,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 3910,
+      "max": [-0.17826901376247406, 0.05780261382460594, 0.0050098588690161705],
+      "min": [
+        -0.2009730488061905, -0.022843211889266968, -0.010161872021853924
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 3910,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 3910,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 3910,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 3910,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 16692,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 13133,
+      "max": [0.21386876702308655, 0.07206632196903229, 0.03264055773615837],
+      "min": [-0.19783759117126465, -0.08111868053674698, 0.016247456893324852],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 13133,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 13133,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 13133,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 13133,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 56268,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 4,
+      "max": [0.21717888116836548, 0.07638377696275711, 0.015541262924671173],
+      "min": [-0.20123273134231567, -0.08482278138399124, 0.015541262924671173],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 6,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 280,
+      "max": [0.1917402148246765, 0.06483374536037445, -0.016472937539219856],
+      "min": [-0.17853541672229767, 0.05246345326304436, -0.031175212934613228],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 280,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 280,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 280,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 280,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 1008,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 703,
+      "max": [-0.18964241445064545, 0.02152484469115734, 0.0011296705342829227],
+      "min": [
+        -0.20085203647613525, 0.011338623240590096, -0.005204532295465469
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 703,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 703,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 703,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 703,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 2622,
+      "type": "SCALAR"
+    },
+    {
+      "componentType": 5126,
+      "count": 707,
+      "max": [
+        -0.18964241445064545, -0.0058277263306081295, 0.0011296705342829227
+      ],
+      "min": [
+        -0.20085203647613525, -0.016013948246836662, -0.005204532295465469
+      ],
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 707,
+      "type": "VEC3"
+    },
+    {
+      "componentType": 5126,
+      "count": 707,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 707,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5126,
+      "count": 707,
+      "type": "VEC2"
+    },
+    {
+      "componentType": 5123,
+      "count": 2622,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5372,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 30639,
+      "byteOffset": 5372
+    },
+    {
+      "buffer": 0,
+      "byteLength": 29255,
+      "byteOffset": 36012
+    },
+    {
+      "buffer": 0,
+      "byteLength": 97741,
+      "byteOffset": 65268
+    },
+    {
+      "buffer": 0,
+      "byteLength": 178,
+      "byteOffset": 163012
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2985,
+      "byteOffset": 163192
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6283,
+      "byteOffset": 166180
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6311,
+      "byteOffset": 172464
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 178776,
+      "uri": "1.bin"
+    }
+  ]
+}
