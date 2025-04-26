@@ -29,7 +29,7 @@ export type KeyboardCanProps = {
 export function KeyboardCan({
   bodyVariant = "black",
   keycapsVariant = "classic",
-  scale = 3,
+  scale = 4,
   ...props
 }: KeyboardCanProps) {
   const { nodes } = useGLTF("/1.gltf") as any;
