@@ -1,3 +1,4 @@
+"use client";
 import { PrismicText } from "@prismicio/react";
 import { Content } from "@prismicio/client";
 

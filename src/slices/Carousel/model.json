@@ -21,13 +21,13 @@
             "multi": "heading2"
           }
         },
-        "price_copy": {
+        "heding2": {
           "type": "StructuredText",
           "config": {
-            "label": "Price Copy",
+            "label": "Heding2",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph"
+            "single": "heading2"
           }
         }
       },

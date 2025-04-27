@@ -14,13 +14,13 @@
 					}
 				]
 			},
-			"price_copy": {
+			"heding2": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "paragraph",
+						"type": "heading2",
 						"content": {
-							"text": "Non anim deserunt ex irure cupidatat. Anim aute ullamco amet excepteur. Dolore commodo esse amet."
+							"text": "Person"
 						}
 					}
 				]
