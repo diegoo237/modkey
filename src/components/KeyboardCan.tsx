@@ -18,6 +18,10 @@ const bodyTexturePaths = {
 // Texturas das keycaps
 const keycapsTexturePaths = {
   classic: "/labels/keyCapsLabels/Classic.png",
+  black: "/labels/keyCapsLabels/Black.png",
+  blue: "/labels/keyCapsLabels/Blue.png",
+  yellow: "/labels/keyCapsLabels/Yellow.png",
+  white: "/labels/keyCapsLabels/White.png",
 };
 
 export type KeyboardCanProps = {

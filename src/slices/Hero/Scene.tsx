@@ -102,7 +102,7 @@ export default function Scene({}: Props) {
         {
           x: 1,
           duration: 3,
-          ease: "side-inOut",
+          ease: "sine.inOut",
         },
         1.3,
       );
@@ -122,26 +122,26 @@ export default function Scene({}: Props) {
         <FloatingCan
           ref={can2Ref}
           bodyVariant="white"
-          keycapsVariant="classic"
+          keycapsVariant="blue"
           floatSpeed={FLOAT_SPEED}
         />
       </group>
       <FloatingCan
         ref={can3Ref}
-        bodyVariant="blue"
-        keycapsVariant="classic"
+        bodyVariant="red"
+        keycapsVariant="black"
         floatSpeed={FLOAT_SPEED}
       />
       <FloatingCan
         ref={can4Ref}
-        bodyVariant="green"
-        keycapsVariant="classic"
+        bodyVariant="blue"
+        keycapsVariant="white"
         floatSpeed={FLOAT_SPEED}
       />
       <FloatingCan
         ref={can5Ref}
-        bodyVariant="red"
-        keycapsVariant="classic"
+        bodyVariant="green"
+        keycapsVariant="yellow"
         floatSpeed={FLOAT_SPEED}
       />
 
