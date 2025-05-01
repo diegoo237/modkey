@@ -19,14 +19,7 @@ import Scene from "./Scene";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-/**
- * Props for `Hero`.
- */
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
-
-/**
- * Component for "Hero" Slices.
- */
 
 const Hero: FC<HeroProps> = ({ slice }) => {
   const ready = useStore((state) => state.ready);
