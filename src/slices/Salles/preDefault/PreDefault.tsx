@@ -10,7 +10,7 @@ import { useState } from "react";
 import Catalog from "./Catalog";
 
 type PreDefaultProps = {
-  slice: Content.CarouselSlice;
+  slice: Content.SallesSlice;
   display: "none" | "flex";
   togleD: (value: "none" | "flex") => void;
 };
@@ -44,7 +44,7 @@ export default function PreDefault({
               onClick={() => clickBtn()}
               className="mt-4 rounded-lg bg-[#72132B] px-7 py-3 text-center text-3xl font-bold hover:bg-[#660d23] hover:px-9 hover:py-4 md:text-5xl"
             >
-              <PrismicText field={slice.primary.heding2} />
+              <PrismicText field={slice.primary.heading2} />
             </button>
           </>
         </div>

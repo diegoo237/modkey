@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   alternating_text: dynamic(() => import("./AlternatingText")),
-  carousel: dynamic(() => import("./Salles")),
+  big_text: dynamic(() => import("./BigText")),
   hero: dynamic(() => import("./Hero")),
+  salles: dynamic(() => import("./Salles")),
 };

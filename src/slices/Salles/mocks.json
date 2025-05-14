@@ -9,18 +9,18 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Train"
+							"text": "Loose"
 						}
 					}
 				]
 			},
-			"heding2": {
+			"heading2": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Person"
+							"text": "Which"
 						}
 					}
 				]

@@ -27,10 +27,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "alternating_text": {
+            "big_text": {
               "type": "SharedSlice"
             },
-            "carousel": {
+            "salles": {
+              "type": "SharedSlice"
+            },
+            "alternating_text": {
               "type": "SharedSlice"
             },
             "hero": {

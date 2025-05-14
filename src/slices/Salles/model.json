@@ -1,8 +1,8 @@
 {
-  "id": "carousel",
+  "id": "salles",
   "type": "SharedSlice",
-  "name": "Carousel",
-  "description": "Carousel",
+  "name": "Salles",
+  "description": "Salles",
   "variations": [
     {
       "id": "default",
@@ -15,16 +15,16 @@
         "heding": {
           "type": "StructuredText",
           "config": {
-            "label": "Heding",
+            "label": "Heading",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "heading2"
           }
         },
-        "heding2": {
+        "heading2": {
           "type": "StructuredText",
           "config": {
-            "label": "Heding2",
+            "label": "Heading2",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "heading2"

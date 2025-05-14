@@ -1,11 +1,17 @@
 "use client";
+import { useState } from "react";
+
+import gsap from "gsap";
 
 import { Environment, View } from "@react-three/drei";
+
 import { PrismicText } from "@prismicio/react";
-import MakeScene from "./MakeScene";
-import { useState } from "react";
 import { Content } from "@prismicio/client";
+
+import MakeScene from "./MakeScene";
+
 import { KeyboardCanProps } from "@/components/KeyboardCan";
+import { WavyCircles } from "../preDefault/WavyCircles";
 import ArrowButton from "@/components/ArrowButton";
 
 const UPPERCOLORS: {
@@ -25,10 +31,10 @@ const CAPSCOLORS: {
   color: string;
   name: string;
 }[] = [
-  { capVariant: "classic", color: "#000000", name: "Classic Label" },
-  { capVariant: "black", color: "#FF0000", name: "Black Label" },
-  { capVariant: "blue", color: "#0000FF", name: "Blue Label" },
-  { capVariant: "yellow", color: "#00FF00", name: "Yellow Label" },
+  { capVariant: "classic", color: "#CB714B", name: "Classic Label" },
+  { capVariant: "black", color: "#000000", name: "Black Label" },
+  { capVariant: "blue", color: "#3671C3", name: "Blue Label" },
+  { capVariant: "yellow", color: "#CCA700", name: "Yellow Label" },
   { capVariant: "white", color: "#FFFFFF", name: "White Label" },
 ];
 
@@ -53,15 +59,13 @@ function changeCapVariant(
 }
 
 type MakeAreaProps = {
-  slice: Content.CarouselSlice;
+  slice: Content.SallesSlice;
   display: "none" | "flex";
   togleD: (value: "none" | "flex") => void;
 };
 
 export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
   const [displayb, setDisplayb] = useState(false);
-  const [combine, setCombine] = useState(false);
-
   const [currentBodyIndex, setCurrentBodyIndex] = useState(0);
   const [currentCapIndex, setCurrentCapIndex] = useState(0);
 
@@ -70,19 +74,28 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
     togleD(display === "flex" ? "none" : "flex");
   }
 
-  function handleCombine() {
-    setCombine(true);
-  }
-
   return (
     <div
-      className={`flex h-full w-full flex-col items-center justify-center rounded-xl bg-[#72132B] ${
+      className={`relative flex h-full w-full flex-col items-center justify-center rounded-xl bg-[#72132B] ${
         display === "none" ? "hidden" : "flex"
       }`}
     >
+      {displayb && (
+        <WavyCircles
+          className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2"
+          outerColor={UPPERCOLORS[currentBodyIndex].color}
+          innerColor={CAPSCOLORS[currentCapIndex].color}
+        />
+      )}
+
+      <h2
+        className={`relative text-center text-5xl font-bold ${displayb ? "flex" : "hidden"}`}
+      >
+        Make Your Keyboard
+      </h2>
       <div className="grid grid-cols-[auto_auto_auto]">
         <div
-          className={`flex flex-col justify-center gap-[140px] ${displayb ? "block" : "hidden"}`}
+          className={`items-center justify-center gap-5 ${displayb ? "flex" : "hidden"}`}
         >
           <ArrowButton
             func={changeCapVariant}
@@ -90,52 +103,42 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
             set={setCurrentCapIndex}
             operator={"-"}
           />
+          <h2 className="text-3xl font-bold">KeyCap</h2>
           <ArrowButton
-            func={changeBodyVariant}
-            index={currentBodyIndex}
-            set={setCurrentBodyIndex}
-            operator={"-"}
-          />
-          <ArrowButton
-            func={changeBodyVariant}
-            index={currentBodyIndex}
-            set={setCurrentBodyIndex}
-            operator={"-"}
+            func={changeCapVariant}
+            index={currentCapIndex}
+            set={setCurrentCapIndex}
+            operator={"+"}
           />
         </div>
 
         <View className="col-span-1 aspect-square h-[64vmin]">
           <MakeScene
             buttonClick={displayb}
-            combineClick={combine}
-            floatIntensity={1}
-            rotationIntensity={1}
             bodyVariant={UPPERCOLORS[currentBodyIndex].bodyVariant}
             capVariant={CAPSCOLORS[currentCapIndex].capVariant}
           />
+
           <Environment
             files="/hdr/lobby.hdr"
             environmentIntensity={0.6}
             environmentRotation={[0, 3, 0]}
           />
+
           <directionalLight intensity={6} position={[0, 1, 1]} />
         </View>
 
         <div
-          className={`flex flex-col justify-center gap-[140px] ${displayb ? "block" : "hidden"}`}
+          className={`items-center justify-center gap-5 ${displayb ? "flex" : "hidden"}`}
         >
-          <ArrowButton
-            func={changeCapVariant}
-            index={currentCapIndex}
-            set={setCurrentCapIndex}
-            operator={"+"}
-          />
           <ArrowButton
             func={changeBodyVariant}
             index={currentBodyIndex}
             set={setCurrentBodyIndex}
-            operator={"+"}
+            operator={"-"}
           />
+          <h2 className="text-3xl font-bold">Case</h2>
+
           <ArrowButton
             func={changeBodyVariant}
             index={currentBodyIndex}
@@ -144,13 +147,6 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
           />
         </div>
       </div>
-
-      <button
-        onClick={handleCombine}
-        className={`${displayb ? "block" : "hidden"} mt-4 rounded-lg bg-[#73293cbc] px-7 py-3 text-center text-3xl font-bold md:text-5xl`}
-      >
-        COMBINAR
-      </button>
 
       <button
         onClick={() => clickBtn()}

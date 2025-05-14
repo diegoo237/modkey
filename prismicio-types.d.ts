@@ -5,8 +5,9 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | BigTextSlice
+  | SallesSlice
   | AlternatingTextSlice
-  | CarouselSlice
   | HeroSlice;
 
 /**
@@ -154,58 +155,33 @@ export type AlternatingTextSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Carousel → Default → Primary*
- */
-export interface CarouselSliceDefaultPrimary {
-  /**
-   * Heding field in *Carousel → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: carousel.default.primary.heding
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  heding: prismic.RichTextField;
-
-  /**
-   * Heding2 field in *Carousel → Default → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: carousel.default.primary.heding2
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  heding2: prismic.TitleField;
-}
-
-/**
- * Default variation for Carousel Slice
+ * Default variation for BigText Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type CarouselSliceDefault = prismic.SharedSliceVariation<
+export type BigTextSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<CarouselSliceDefaultPrimary>,
+  Record<string, never>,
   never
 >;
 
 /**
- * Slice variation for *Carousel*
+ * Slice variation for *BigText*
  */
-type CarouselSliceVariation = CarouselSliceDefault;
+type BigTextSliceVariation = BigTextSliceDefault;
 
 /**
- * Carousel Shared Slice
+ * BigText Shared Slice
  *
- * - **API ID**: `carousel`
- * - **Description**: Carousel
+ * - **API ID**: `big_text`
+ * - **Description**: BigText
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type CarouselSlice = prismic.SharedSlice<
-  "carousel",
-  CarouselSliceVariation
+export type BigTextSlice = prismic.SharedSlice<
+  "big_text",
+  BigTextSliceVariation
 >;
 
 /**
@@ -326,6 +302,58 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *Salles → Default → Primary*
+ */
+export interface SallesSliceDefaultPrimary {
+  /**
+   * Heading field in *Salles → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: salles.default.primary.heding
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heding: prismic.RichTextField;
+
+  /**
+   * Heading2 field in *Salles → Default → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: salles.default.primary.heading2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading2: prismic.TitleField;
+}
+
+/**
+ * Default variation for Salles Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SallesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SallesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Salles*
+ */
+type SallesSliceVariation = SallesSliceDefault;
+
+/**
+ * Salles Shared Slice
+ *
+ * - **API ID**: `salles`
+ * - **Description**: Salles
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SallesSlice = prismic.SharedSlice<"salles", SallesSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -356,14 +384,17 @@ declare module "@prismicio/client" {
       AlternatingTextSliceDefaultPrimary,
       AlternatingTextSliceVariation,
       AlternatingTextSliceDefault,
-      CarouselSlice,
-      CarouselSliceDefaultPrimary,
-      CarouselSliceVariation,
-      CarouselSliceDefault,
+      BigTextSlice,
+      BigTextSliceVariation,
+      BigTextSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      SallesSlice,
+      SallesSliceDefaultPrimary,
+      SallesSliceVariation,
+      SallesSliceDefault,
     };
   }
 }

@@ -17,37 +17,37 @@ const VARIANTS: {
   bodyVariant: KeyboardCanProps["bodyVariant"];
   keycapsVariant: KeyboardCanProps["keycapsVariant"];
   color: string;
-  name: string;
+  capColor: string;
 }[] = [
   {
     bodyVariant: "white",
     keycapsVariant: "blue",
-    color: "#710523",
-    name: "Black Cherry",
+    color: "#FFFFFF",
+    capColor: "#3671C3",
   },
   {
     bodyVariant: "green",
     keycapsVariant: "yellow",
-    color: "#572981",
-    name: "Grape Goodness",
+    color: "#00FF00",
+    capColor: "#CCA700",
   },
   {
     bodyVariant: "blue",
     keycapsVariant: "white",
-    color: "#164405",
-    name: "Lemon Lime",
+    color: "#0000FF",
+    capColor: "#FFFFFF",
   },
   {
     bodyVariant: "red",
     keycapsVariant: "black",
-    color: "#690B3D",
-    name: "Strawberry Lemonade",
+    color: "#FF0000",
+    capColor: "#000000",
   },
   {
     bodyVariant: "black",
     keycapsVariant: "classic",
-    color: "#4B7002",
-    name: "Watermelon Crush",
+    color: "#000000",
+    capColor: "#CB714B",
   },
 ];
 
@@ -75,27 +75,18 @@ export default function Catalog({}: Props) {
         duration: 1,
       },
       0,
-    )
-      .to(
-        ".background, .wavy-circles-outer, .wavy-circles-inner",
-        {
-          backgroundColor: VARIANTS[nextIndex].color,
-          fill: VARIANTS[nextIndex].color,
-          ease: "power2.inOut",
-          duration: 1,
-        },
-        0,
-      )
-      .to(".text-wrapper", { duration: 0.2, y: -10, opacity: 0 }, 0)
-      .to({}, { onStart: () => setCurrentVariantIndex(nextIndex) }, 0.5)
-      .to(".text-wrapper", { duration: 0.2, y: 0, opacity: 1 }, 0.7);
+    ).to({}, { onStart: () => setCurrentVariantIndex(nextIndex) }, 0.5);
   }
 
   return (
     <section className="carousel relative grid h-screen w-full grid-rows-[auto,4fr,auto] justify-center overflow-hidden bg-white py-12 text-white">
       <div className="background pointer-events-none absolute inset-0 bg-[#710523] opacity-50" />
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
-
+      <WavyCircles
+        className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2"
+        outerColor={VARIANTS[currentVariantIndex].color}
+        innerColor={VARIANTS[currentVariantIndex].capColor}
+      />
       <h2 className="relative text-center text-5xl font-bold">
         Select Your Keyboard
       </h2>

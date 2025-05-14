@@ -6,9 +6,9 @@ import { SliceComponentProps } from "@prismicio/react";
 import MakeArea from "./makeArea/MakeArea";
 import PreDefault from "./preDefault/PreDefault";
 
-export type CarouselProps = SliceComponentProps<Content.CarouselSlice>;
+export type SallesProps = SliceComponentProps<Content.SallesSlice>;
 
-const Carousel: FC<CarouselProps> = ({ slice }) => {
+const Salles: FC<SallesProps> = ({ slice }) => {
   const [makeAreaDisplay, setMakeAreaDisplay] = useState("flex");
   const [defaultAreaDisplay, setDefaultAreaDisplay] = useState("flex");
 
@@ -37,4 +37,4 @@ const Carousel: FC<CarouselProps> = ({ slice }) => {
   );
 };
 
-export default Carousel;
+export default Salles;
