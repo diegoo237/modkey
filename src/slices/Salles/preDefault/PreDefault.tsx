@@ -36,7 +36,7 @@ export default function PreDefault({
           }`}
         >
           <>
-            <View className="col-span-1 aspect-square h-[64vmin] min-h-32">
+            <View className="col-span-1 aspect-square h-[20rem] min-h-32 xl:h-[34rem]">
               <Scene />
               <Environment files="/hdr/lobby.hdr" environmentIntensity={1.5} />
             </View>

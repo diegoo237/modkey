@@ -19,9 +19,11 @@ const BigText: FC<BigTextProps> = ({ slice }) => {
     >
       <h2 className="grid w-full gap-3 py-10 text-center font-black uppercase leading-[.7]">
         <div className="text-[32vw] lg:text-[34vw]">Make</div>
-        <div className="grid gap-3 text-[34vw] lg:flex lg:justify-center lg:gap-4 lg:text-[9vw]">
+        <div className="grid gap-3 text-[34vw] lg:justify-center lg:gap-4 lg:text-[9vw]">
           <span className="inline-block">that</span>
-          <span className="inline-block text-[max-18vw]">Keyboard</span>
+          <span className="sm:text-auto inline-block text-[18vw] text-[max-18vw]">
+            Keyboard
+          </span>
           <span className="inline-block">your</span>
         </div>
         <div className="text-[32vw] lg:text-[34vw]">Mode</div>

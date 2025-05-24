@@ -8,7 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { asText, Content } from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useStore } from "@/hooks/useStore";
@@ -123,10 +122,6 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </div>
         </div>
         <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
-          <PrismicNextImage
-            className="w-full md:hidden"
-            field={slice.primary.cans_image}
-          />
           <div>
             <h2 className="text-side-heading text-balance text-6xl font-black uppercase text-sky-900 lg:text-8xl">
               <TextSplitter text={asText(slice.primary.second_heading)} />

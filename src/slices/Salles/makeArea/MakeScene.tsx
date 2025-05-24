@@ -1,6 +1,6 @@
 "use client";
 
-import { Environment, Center, Float, OrbitControls } from "@react-three/drei";
+import { Environment, Center, Float } from "@react-three/drei";
 import { useRef } from "react";
 import { KeyboardCan } from "./KeyboardCan";
 

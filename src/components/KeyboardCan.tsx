@@ -2,7 +2,7 @@
 
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import { GroupProps } from "@react-three/fiber";
+import { GLTF } from "three-stdlib";
 
 useGLTF.preload("/1.gltf");
 
@@ -28,7 +28,7 @@ export type KeyboardCanProps = {
   bodyVariant?: keyof typeof bodyTexturePaths;
   keycapsVariant?: keyof typeof keycapsTexturePaths;
   scale?: number;
-} & GroupProps;
+};
 
 export function KeyboardCan({
   bodyVariant = "black",
@@ -36,7 +36,7 @@ export function KeyboardCan({
   scale = 4,
   ...props
 }: KeyboardCanProps) {
-  const { nodes } = useGLTF("/1.gltf") as any;
+  const { nodes } = useGLTF("/1.gltf") as GLTF;
 
   const bodyTextures = useTexture(bodyTexturePaths);
   const keycapTextures = useTexture(keycapsTexturePaths);

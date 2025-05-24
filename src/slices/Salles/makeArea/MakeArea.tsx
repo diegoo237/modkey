@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
 
-import gsap from "gsap";
-
 import { Environment, View } from "@react-three/drei";
 
 import { PrismicText } from "@prismicio/react";
@@ -76,8 +74,8 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
 
   return (
     <div
-      className={`relative flex h-full w-full flex-col items-center justify-center rounded-xl bg-[#72132B] ${
-        display === "none" ? "hidden" : "flex"
+      className={`flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl bg-[#73293B] ${
+        display === "none" ? "hidden" : "block"
       }`}
     >
       {displayb && (
@@ -112,7 +110,7 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
           />
         </div>
 
-        <View className="col-span-1 aspect-square h-[64vmin]">
+        <View className="col-span-1 aspect-square h-[20rem] min-h-32 xl:h-[34rem]">
           <MakeScene
             buttonClick={displayb}
             bodyVariant={UPPERCOLORS[currentBodyIndex].bodyVariant}
@@ -147,10 +145,9 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
           />
         </div>
       </div>
-
       <button
         onClick={() => clickBtn()}
-        className={`${displayb ? "hidden" : "block"} mt-4 rounded-lg bg-[#73293cbc] px-7 py-3 text-center text-3xl font-bold hover:bg-[#723343] hover:px-9 hover:py-4 md:text-5xl`}
+        className="mt-4 rounded-lg bg-[#72132B] px-7 py-3 text-center text-3xl font-bold hover:bg-[#660d23] hover:px-9 hover:py-4 md:text-5xl"
       >
         <PrismicText field={slice.primary.heding} />
       </button>
