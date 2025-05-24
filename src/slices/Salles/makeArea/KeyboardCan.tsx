@@ -2,7 +2,6 @@
 
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import { GroupProps } from "@react-three/fiber";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
 useGLTF.preload("/1.gltf");
@@ -36,7 +35,9 @@ export const KeyboardCan = forwardRef<
   { bodyVariant = "black", keycapsVariant = "classic", scale = 4, ...props },
   ref,
 ) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { nodes } = useGLTF("/1.gltf") as any;
+
   const bodyTextures = useTexture(bodyTexturePaths);
   const keycapTextures = useTexture(keycapsTexturePaths);
 

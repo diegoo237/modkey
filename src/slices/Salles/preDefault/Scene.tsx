@@ -14,9 +14,7 @@ import React from "react";
 
 gsap.registerPlugin(useGSAP);
 
-type SceneProps = {};
-
-export default function Scene({}: SceneProps) {
+export default function Scene() {
   const float = 1;
 
   const groupRef = useRef<Group>(null);

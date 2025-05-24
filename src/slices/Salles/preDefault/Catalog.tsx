@@ -51,9 +51,7 @@ const VARIANTS: {
   },
 ];
 
-type Props = {};
-
-export default function Catalog({}: Props) {
+export default function Catalog() {
   const [currentVariantIndex, setCurrentVariantIndex] = useState(0);
   const KeyboardCanRef = useRef<Group>(null);
 
