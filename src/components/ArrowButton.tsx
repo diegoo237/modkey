@@ -2,7 +2,12 @@ import { ArrowIcon } from "@/assets/ArrowIcon";
 import clsx from "clsx";
 import React from "react";
 
-type Props = { func; index; set; operator };
+type Props = {
+  func: (set: (value: number) => void, index: number, num: number) => void;
+  index: number;
+  set: (value: number) => void;
+  operator: "+" | "-";
+};
 
 export default function ArrowButton({ func, index, set, operator }: Props) {
   const num = operator === "-" ? -1 : 1;

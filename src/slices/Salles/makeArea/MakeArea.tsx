@@ -74,7 +74,7 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
 
   return (
     <div
-      className={`flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl bg-[#73293B] ${
+      className={`relative flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl bg-[#73293B] ${
         display === "none" ? "hidden" : "block"
       }`}
     >
@@ -147,7 +147,7 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
       </div>
       <button
         onClick={() => clickBtn()}
-        className="mt-4 rounded-lg bg-[#72132B] px-7 py-3 text-center text-3xl font-bold hover:bg-[#660d23] hover:px-9 hover:py-4 md:text-5xl"
+        className={`${displayb ? "hidden" : "block"} mt-4 rounded-lg bg-[#72132B] px-7 py-3 text-center text-3xl font-bold hover:bg-[#660d23] hover:px-9 hover:py-4 md:text-5xl`}
       >
         <PrismicText field={slice.primary.heding} />
       </button>
