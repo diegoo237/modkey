@@ -26,6 +26,15 @@ export default function Scene() {
 
   useGSAP(
     () => {
+      if (
+        !can1Ref.current ||
+        !can2Ref.current ||
+        !can3Ref.current ||
+        !can4Ref.current ||
+        !can5Ref.current
+      )
+        return;
+
       const introTl = gsap.timeline({
         defaults: {
           duration: 3,
@@ -69,27 +78,15 @@ export default function Scene() {
         <KeyboardCan
           ref={can1Ref}
           bodyVariant={"black"}
-          keycapsVariant={"classic"}
+          capVariant={"classic"}
         />
-        <KeyboardCan
-          ref={can2Ref}
-          bodyVariant={"white"}
-          keycapsVariant={"blue"}
-        />
-        <KeyboardCan
-          ref={can3Ref}
-          bodyVariant={"blue"}
-          keycapsVariant={"white"}
-        />
-        <KeyboardCan
-          ref={can4Ref}
-          bodyVariant={"red"}
-          keycapsVariant={"black"}
-        />
+        <KeyboardCan ref={can2Ref} bodyVariant={"white"} capVariant={"blue"} />
+        <KeyboardCan ref={can3Ref} bodyVariant={"blue"} capVariant={"white"} />
+        <KeyboardCan ref={can4Ref} bodyVariant={"red"} capVariant={"black"} />
         <KeyboardCan
           ref={can5Ref}
           bodyVariant={"green"}
-          keycapsVariant={"yellow"}
+          capVariant={"yellow"}
         />
       </Float>
     </group>

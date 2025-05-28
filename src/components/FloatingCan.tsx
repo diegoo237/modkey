@@ -7,7 +7,7 @@ import { Group } from "three";
 
 type FloatingCanProps = {
   bodyVariant?: KeyboardCanProps["bodyVariant"];
-  keycapsVariant?: KeyboardCanProps["keycapsVariant"];
+  keycapsVariant?: KeyboardCanProps["capVariant"];
   floatSpeed?: number;
   rotationIntensity?: number;
   floatIntensity?: number;
@@ -38,10 +38,7 @@ const FloatingCan = forwardRef<Group, FloatingCanProps>(
           floatingRange={floatingRange}
         >
           {children}
-          <KeyboardCan
-            bodyVariant={bodyVariant}
-            keycapsVariant={keycapsVariant}
-          />
+          <KeyboardCan bodyVariant={bodyVariant} capVariant={keycapsVariant} />
         </Float>
       </group>
     );

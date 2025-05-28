@@ -58,7 +58,7 @@ function changeCapVariant(
 
 type MakeAreaProps = {
   slice: Content.SallesSlice;
-  display: "none" | "flex";
+  display: string;
   togleD: (value: "none" | "flex") => void;
 };
 
@@ -113,8 +113,8 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
         <View className="col-span-1 aspect-square h-[20rem] min-h-32 xl:h-[34rem]">
           <MakeScene
             buttonClick={displayb}
-            bodyVariant={UPPERCOLORS[currentBodyIndex].bodyVariant}
-            capVariant={CAPSCOLORS[currentCapIndex].capVariant}
+            bodyVariant={UPPERCOLORS[currentBodyIndex]?.bodyVariant ?? "black"}
+            capVariant={CAPSCOLORS[currentCapIndex].capVariant ?? "black"}
           />
 
           <Environment

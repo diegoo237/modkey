@@ -12,7 +12,7 @@ import { asText, Content } from "@prismicio/client";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useStore } from "@/hooks/useStore";
 import { TextSplitter } from "@/components/TextSplitter";
-import { Bounded } from "@/components/Boundede";
+import { Bounded } from "@/components/Bounded";
 import Button from "@/components/Button";
 import Scene from "./Scene";
 

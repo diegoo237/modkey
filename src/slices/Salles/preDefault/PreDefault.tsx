@@ -11,7 +11,7 @@ import Catalog from "./Catalog";
 
 type PreDefaultProps = {
   slice: Content.SallesSlice;
-  display: "none" | "flex";
+  display: string;
   togleD: (value: "none" | "flex") => void;
 };
 

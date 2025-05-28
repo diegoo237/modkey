@@ -15,7 +15,7 @@ import { WavyCircles } from "./WavyCircles";
 const SPINS_ON_CHANGE = 8;
 const VARIANTS: {
   bodyVariant: KeyboardCanProps["bodyVariant"];
-  keycapsVariant: KeyboardCanProps["keycapsVariant"];
+  keycapsVariant: KeyboardCanProps["capVariant"];
   color: string;
   capColor: string;
 }[] = [
@@ -90,11 +90,12 @@ export default function Catalog() {
       </h2>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center gap-20">
-        <ArrowButton
-          onClick={() => changeFlavor(currentVariantIndex + 1)}
-          direction="left"
-          label="Previous"
-        />
+        <button
+          onClick={() => changeFlavor(currentVariantIndex - 1)}
+          className="size-12 rounded-full border-2 border-white bg-white/10 p-3 opacity-85 ring-white focus:outline-none focus-visible:opacity-100 focus-visible:ring-4 md:size-16 lg:size-20"
+        >
+          <ArrowIcon />
+        </button>
 
         <View className="aspect-square h-[70vmin] min-h-40">
           <Center position={[0, 0, 1.5]}>
@@ -115,34 +116,13 @@ export default function Catalog() {
           <directionalLight intensity={6} position={[0, 1, 1]} />
         </View>
 
-        <ArrowButton
-          onClick={() => changeFlavor(currentVariantIndex - 1)}
-          direction="right"
-          label="Next"
-        />
+        <button
+          onClick={() => changeFlavor(currentVariantIndex + 1)}
+          className="size-12 rounded-full border-2 border-white bg-white/10 p-3 opacity-85 ring-white focus:outline-none focus-visible:opacity-100 focus-visible:ring-4 md:size-16 lg:size-20"
+        >
+          <ArrowIcon className={clsx("-scale-x-100")} />
+        </button>
       </div>
     </section>
-  );
-}
-
-type ArrowButtonProps = {
-  direction?: "right" | "left";
-  label: string;
-  onClick: () => void;
-};
-
-function ArrowButton({
-  label,
-  onClick,
-  direction = "right",
-}: ArrowButtonProps) {
-  return (
-    <button
-      onClick={onClick}
-      className="size-12 rounded-full border-2 border-white bg-white/10 p-3 opacity-85 ring-white focus:outline-none focus-visible:opacity-100 focus-visible:ring-4 md:size-16 lg:size-20"
-    >
-      <ArrowIcon className={clsx(direction === "right" && "-scale-x-100")} />
-      <span className="sr-only">{label}</span>
-    </button>
   );
 }

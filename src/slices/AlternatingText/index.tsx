@@ -1,6 +1,6 @@
 "use client";
 
-import { Bounded } from "@/components/Boundede";
+import { Bounded } from "@/components/Bounded";
 import { asText, Content } from "@prismicio/client";
 import {
   PrismicRichText,
@@ -10,6 +10,7 @@ import {
 import { View } from "@react-three/drei";
 import Scene from "./Scene";
 import clsx from "clsx";
+import { JSX } from "react";
 
 /**
  * Props for `AlternatingText`.

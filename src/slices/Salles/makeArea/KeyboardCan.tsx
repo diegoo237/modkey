@@ -6,6 +6,12 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 
 useGLTF.preload("/1.gltf");
 
+// Definindo o tipo para as props do componente KeyboardCan
+export type KeyboardCanProps = {
+  bodyVariant?: "black" | "red" | "blue" | "green" | "white"; // valores possíveis para bodyVariant
+  keycapsVariant?: "classic" | "black" | "blue" | "yellow" | "white"; // valores possíveis para keycapsVariant
+  scale?: number; // tipo de scale
+};
 // Texturas do corpo
 const bodyTexturePaths = {
   black: "/labels/baseLabels/Black.png",

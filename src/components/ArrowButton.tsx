@@ -3,9 +3,13 @@ import clsx from "clsx";
 import React from "react";
 
 type Props = {
-  func: (set: (value: number) => void, index: number, num: number) => void;
+  func: (
+    set: React.Dispatch<React.SetStateAction<number>>,
+    index: number,
+    num: number,
+  ) => void;
   index: number;
-  set: (value: number) => void;
+  set: React.Dispatch<React.SetStateAction<number>>;
   operator: "+" | "-";
 };
 

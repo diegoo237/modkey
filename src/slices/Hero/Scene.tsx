@@ -37,7 +37,7 @@ export default function Scene() {
       !can5Ref.current ||
       !can1GroupRef.current ||
       !can2GroupRef.current ||
-      !groupRef
+      !groupRef.current
     )
       return;
 
