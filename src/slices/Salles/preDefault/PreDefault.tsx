@@ -31,7 +31,7 @@ export default function PreDefault({
     <>
       {clickBtnState ? (
         <div
-          className={`flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl bg-[#73293B] ${
+          className={`flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl outline-dotted ${
             display === "none" ? "hidden" : "block"
           }`}
         >

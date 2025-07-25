@@ -1,4 +1,5 @@
 "use client";
+import * as React from "react";
 
 import { Bounded } from "@/components/Bounded";
 import { asText, Content } from "@prismicio/client";
@@ -21,6 +22,7 @@ export type AlternatingTextProps =
 /**
  * Component for "AlternatingText" Slices.
  */
+
 const AlternatingText = ({ slice }: AlternatingTextProps): JSX.Element => {
   return (
     <Bounded

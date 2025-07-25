@@ -21,7 +21,7 @@ const Salles: FC<SallesProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={`${padding} flex h-screen flex-col items-center justify-center gap-16 overflow-hidden bg-[#7105248a] text-white xl:flex-row`}
+      className={`${padding} bg-gray200 flex h-screen flex-col items-center justify-center gap-16 overflow-hidden text-white xl:flex-row`}
     >
       <MakeArea
         slice={slice}

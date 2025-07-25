@@ -74,7 +74,7 @@ export default function MakeArea({ slice, display, togleD }: MakeAreaProps) {
 
   return (
     <div
-      className={`relative flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl bg-[#73293B] ${
+      className={`relative flex h-full min-h-32 w-full flex-col items-center justify-center rounded-xl outline-dotted ${
         display === "none" ? "hidden" : "block"
       }`}
     >
