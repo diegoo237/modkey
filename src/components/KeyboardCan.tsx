@@ -3,6 +3,7 @@
 import React, { forwardRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import * as THREE from "three";
+import { Group } from "three";
 
 useGLTF.preload("/1.gltf");
 
@@ -30,15 +31,12 @@ export type KeyboardCanProps = {
   scale?: number;
 };
 
-export function KeyboardCan({
-  bodyVariant = "black",
-  keycapsVariant = "classic",
-  scale = 4,
-  ...props
-}: KeyboardCanProps) {
-  const { nodes } = useGLTF("/1.gltf") as unknown as {
-    nodes: Record<string, THREE.Mesh>;
-  };
+export const KeyboardCan = forwardRef<Group, KeyboardCanProps>(
+  (
+    { bodyVariant = "black", capVariant = "classic", scale = 4, ...props },
+    ref,
+  ) => {
+    const { nodes } = useGLTF("/1.gltf");
 
     const bodyTextures = useTexture(bodyTexturePaths);
     const keycapTextures = useTexture(keycapsTexturePaths);
